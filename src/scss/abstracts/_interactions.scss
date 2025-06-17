@@ -1,0 +1,6 @@
+// Interaction
+$fast: 0.3s;
+$slow: 0.6s;
+$transition: all ease $fast;
+$transitionSlow: all ease $slow;
+$bezier: cubic-bezier(.66, 0, .33, 1);

@@ -1,0 +1,21 @@
+// Breakpoints
+$small: 415;
+$medium: 768;
+$large: 1025;
+$xlarge: 1440;
+$xxlarge: 1920;
+
+$toSmall: 'max-width:' $small - 1 + px;
+$toMedium: 'max-width:' $medium - 1 + px;
+$toLarge: 'max-width:' $large - 1 + px;
+$toXlarge: 'max-width:' $xlarge - 1 + px;
+$toXxlarge: 'max-width:' $xxlarge - 1 + px;
+
+$fromSmall: 'min-width:' $small + px;
+$fromMedium: 'min-width:' $medium + px;
+$fromLarge: 'min-width:' $large + px;
+$fromXlarge: 'min-width:' $xlarge + px;
+$fromXxlarge: 'min-width:' $xxlarge + px;
+
+$landscape: 'orientation:' landscape;
+$portrait: 'orientation:' portrait;

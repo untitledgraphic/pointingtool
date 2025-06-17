@@ -1,0 +1,27 @@
+@use "../abstracts/" as *;
+@use "../utilities/" as *;
+
+/* Basics
+-----------------------------------------*/
+
+body {
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+    font-family: "Roboto", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 600;
+	font-style: normal;
+}
+
+body,
+p {
+	font-size: rem-calc(16);
+    line-height: 1;
+}
+
+a, 
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}

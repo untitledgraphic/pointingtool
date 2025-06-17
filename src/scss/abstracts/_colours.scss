@@ -1,0 +1,10 @@
+// Descriptive base colors 
+$notWhite: hsl(0, 0%, 96%);
+$notBlack: hsl(0, 0%, 15%);
+
+// We use these to control various global styles
+$colorPrimary: $notWhite;
+$textColour: $notWhite;
+$textColourNeg: $notBlack;
+
+$bg: $notBlack;

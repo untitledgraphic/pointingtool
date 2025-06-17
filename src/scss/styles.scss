@@ -1,0 +1,25 @@
+/*! (c) 2025 Craig Cooper
+/* Name: Pointing Tool
+ * Author: Craig Cooper
+ * Author URI: http://craigomatic.co.uk
+ * Description: A tool to help make scrum poker decisions
+ * Version: 0.0.1
+ */
+
+@charset "UTF-8";
+
+// Base
+// core elements
+@use "base/base";
+@use "base/typography";
+@use "base/helpers";
+
+// Components
+// singular modular items, no parent-child relationship
+@use "components/tool";
+
+// Patterns
+// objects that have children
+
+// Views
+// specific views

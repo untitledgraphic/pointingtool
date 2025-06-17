@@ -1,0 +1,48 @@
+@use "sass:math";
+@use "../abstracts/" as *;
+@use 'sass:list';
+
+
+
+/**
+ * Calculate columns
+ */
+
+@function column-calc($columns) {
+    $result: percentage(( math.div($columns, $total-columns) ));
+    @if $result == 0% { $result: 0; }
+    @return $result;
+}
+
+// REM Calc 
+// ********************************************************************************
+
+// Strip unit
+// Strips the unit of measure and returns it
+@function strip-unit($num) {
+    //@return $num / ($num * 0 + 1);
+    @return math.div($num, $num * 0 + 1);
+}
+
+// Convert to REM
+@function convert-to-rem($value, $base-value: $baseRem) {
+    //$value: strip-unit($value) / strip-unit($base-value) * 1rem;
+    $value: math.div(strip-unit($value), strip-unit($base-value)) * 1rem;;
+    @if ($value == 0rem) { $value: 0; } // Turn 0rem into 0
+    @return $value;
+}
+
+// Calculate
+@function rem-calc($values, $base-value: $baseRem) {
+    $max: list.length($values);
+
+    @if $max == 1 { 
+        @return convert-to-rem(list.nth($values, 1), $base-value); 
+    }
+
+    $remValues: ();
+    @for $i from 1 through $max {
+        $remValues: append($remValues, convert-to-rem(list.nth($values, $i), $base-value));
+    }
+    @return $remValues;
+}

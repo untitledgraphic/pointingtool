@@ -1,0 +1,29 @@
+{# vars #}
+
+{% extends "_layout.njk" %}
+{% block content %} 
+
+<div class="content">
+	
+	<div class="options">
+		
+		<div class="range range--complexity">
+			<label for="complexity">Complexity: 0</label>
+			<input type="range" id="complexity" name="complexity" min="0" max="5" value="0"/>
+		</div>
+		
+		<div class="range range--risk">
+			<label for="risk">Risk: 0</label>
+			<input type="range" id="risk" name="risk" min="0" max="5" value="0"/>
+		</div>
+		
+		<div class="range range--volume">
+			<label for="volume">Volume: 0</label>
+			<input type="range" id="volume" name="volume" min="0" max="5" value="0"/>
+		</div>
+	</div>
+	
+	<div id="result" class="result">?</div>
+</div>
+
+{% endblock %}

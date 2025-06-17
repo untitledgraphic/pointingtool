@@ -1,0 +1,17 @@
+$baseRem: 16px !default; // All your rems will be calculated from here
+$fontSize: 1rem; 
+$fontLineHeight: 1.4; 
+
+// Global
+$sans: "Roboto", sans-serif;
+$serif: Georgia, Times, "Times New Roman", serif;
+$monospace: Monaco, Consolas, monospace;
+$fontWeightNormal: 300;
+$fontWeightBold: 700;
+$fontItalic: italic;
+
+$fontFamily: $sans;
+$fontWeight: $fontWeightNormal;
+$fontStyle: normal;
+$textPrimary: $sans;
+$textSecondary: $serif;
