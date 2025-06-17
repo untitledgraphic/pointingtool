@@ -49,7 +49,7 @@ gulp.task('sass', function() {
         )
         .pipe(autoprefixer())
         .pipe(sourcemaps.write('.'))
-        .pipe(gulp.dest('public/css'))
+        .pipe(gulp.dest('css'))
         .pipe(browserSync.stream());
 });
 
@@ -60,7 +60,7 @@ gulp.task("js", function () {
         .pipe(sourcemaps.init())
         .pipe(uglify())
         .pipe(sourcemaps.write("."))
-        .pipe(gulp.dest("public/js"))
+        .pipe(gulp.dest("js"))
         .pipe(browserSync.stream());
 });
 
@@ -74,7 +74,7 @@ gulp.task('html', function() {
     .pipe(nunjucksRender({
         path: ['src/html/templates']
     }))
-    .pipe(gulp.dest('public/'))
+    .pipe(gulp.dest('.'))
 });
 
 // HTML watch
@@ -88,7 +88,7 @@ gulp.task('php', function () {
         path: ['src/html/templates'],
         inheritExtension: true
     }))
-    .pipe(gulp.dest('public/'))
+    .pipe(gulp.dest('.'))
 });
 
 // PHP watch
@@ -101,7 +101,7 @@ gulp.task(
 	gulp.series("sass", "js", "html", "php", function () {
 		browserSync.init({
 			server: {
-				baseDir: "./public",
+				baseDir: "./",
 			},
 			notify: false,
 		});
